@@ -23,7 +23,7 @@ const TodoFilter = () => {
         className={buttonStyles}
         onClick={() => handleFilter("COMPLETED")}
       >
-        Show remaining tasks
+        Show completed tasks
       </button>
     </div>
   );
