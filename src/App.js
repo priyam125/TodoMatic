@@ -1,4 +1,5 @@
 import "./App.css";
+import TodoFilter from "./components/TodoFilter";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
@@ -7,7 +8,10 @@ function App() {
     <div className="p-4 space-y-4">
       <div className="text-4xl font-bold"> TodoMatic </div>
       <div className="text-3xl font-bold"> What needs to be done?</div>
-      <TodoForm />
+      <div className="flex flex-col space-y-2">
+        <TodoForm />
+        <TodoFilter />
+      </div>
       <TodoList />
     </div>
   );
