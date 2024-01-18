@@ -1,5 +1,27 @@
+/* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8758ff; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Add rounded corners to the thumb */
+}
+
+/* Customize scrollbar for Firefox */
+/* Note: Firefox does not support styling the scrollbar itself, only the thumb */
+/* This style will be applied when hovering over the scrollbar */
+* {
+  scrollbar-color: #8758ff transparent; /* Set the color of the scrollbar thumb */
+  scrollbar-width: thin; /* Set the width of the scrollbar thumb */
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #8758ff;
 }
 
 .App-logo {

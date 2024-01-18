@@ -46,13 +46,15 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div>
-        <div className="font-bold text-3xl">
+      <div className="">
+        <div className="font-bold lg:text-3xl md:text-2xl">
           {`${this.state.remainingTodos} tasks remaining`}
         </div>
-        {this.state.filteredTodos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
-        ))}
+        <div className="px-6 py-2 md:w-3/4 w-[100%]">
+          {this.state.filteredTodos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} />
+          ))}
+        </div>
       </div>
     );
   }

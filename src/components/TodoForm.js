@@ -20,16 +20,19 @@ const TodoForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="space-x-2">
+      <div className="flex items-center">
         <input
           type="text"
-          className="outline rounded-sm"
+          className="outline-none rounded-sm bg-transparent border border-[#8758ff] text-[#fff] lg:py-[0.3rem] py-[0.25rem] lg:px-[1rem]"
           required
           value={todoValue}
           onChange={(e) => setTodoValue(e.target.value)}
         />
-        <button type="submit" className="">
-          ADD
+        <button
+          type="submit"
+          className="bg-[#8758ff] border-none lg:py-[0.33rem] px-[0.5rem] py-[0.28rem]"
+        >
+          Add Task
         </button>
       </div>
     </form>

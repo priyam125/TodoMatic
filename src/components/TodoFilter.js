@@ -9,11 +9,12 @@ const TodoFilter = () => {
     dispatch(filterTodos(filterType));
   };
 
-  const buttonStyles = "px-4 border border-gray-500 rounded";
+  const buttonStyles =
+    "px-4 border border-gray-500 rounded flex lg:text-base text-sm";
 
   return (
-    <div className="mt-2 space-x-2">
-      <button className={buttonStyles} onClick={() => handleFilter("ALL")}>
+    <div className="mt-2 flex flex-wrap gap-2">
+      <button className={`${buttonStyles}`} onClick={() => handleFilter("ALL")}>
         Show all tasks
       </button>
       <button className={buttonStyles} onClick={() => handleFilter("ACTIVE")}>

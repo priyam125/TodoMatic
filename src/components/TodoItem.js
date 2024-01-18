@@ -43,7 +43,7 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 w-full justify-between bg-[#8758ff] mb-2 lg:p-2 p-1">
       <div className="flex items-center space-x-2">
         <input
           type="checkbox"
@@ -65,7 +65,7 @@ const TodoItem = ({ todo }) => {
           </p>
         )}
       </div>
-      <div className="">
+      <div className="flex gap-2 items-center">
         {isEditing ? (
           <>
             <span onClick={handleSaveTodo}>
