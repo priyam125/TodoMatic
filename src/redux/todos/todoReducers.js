@@ -3,6 +3,8 @@ import {
   DELETE_ALL,
   FILTER_TODOS,
   UPDATE_TODO,
+  EDIT_TODO,
+  REMOVE_TODO,
 } from "../todos/todoActions";
 
 const initialState = {
@@ -28,6 +30,20 @@ const todoReducer = (state = initialState, action) => {
             ? { ...todo, completed: !todo.completed }
             : todo
         ),
+      };
+    case EDIT_TODO:
+      console.log(action.payload);
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === action.payload.id
+            ? { ...todo, todo: action.payload.updatedTodo }
+            : todo
+        ),
+      };
+    case REMOVE_TODO:
+      return {
+        todos: state.todos.filter((todo) => todo.id !== action.payload.id),
       };
     case FILTER_TODOS:
       return { ...state, filterType: action.payload.filterType };
