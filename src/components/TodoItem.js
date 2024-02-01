@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { useDispatch } from "react-redux";
 import { Icon } from "react-icons-kit";
 import { trash } from "react-icons-kit/feather/trash";
@@ -7,14 +7,10 @@ import { save } from "react-icons-kit/feather/save";
 import { x } from "react-icons-kit/feather/x";
 import { updateTodo, editTodo, removeTodo } from "../redux/todos/todoActions";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = memo(({ todo }) => {
   const dispatch = useDispatch();
   const [isEditing, setEditing] = useState(false);
   const [editedTodo, setEditedTodo] = useState();
-
-  useEffect(() => {
-    console.log(editedTodo);
-  });
 
   useEffect(() => {
     setEditedTodo(todo.todo);
@@ -88,6 +84,6 @@ const TodoItem = ({ todo }) => {
       </div>
     </div>
   );
-};
+});
 
 export default TodoItem;
